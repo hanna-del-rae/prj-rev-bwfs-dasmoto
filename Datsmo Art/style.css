@@ -1,0 +1,213 @@
+/*Core Styles*/
+
+body {
+    font-family: helvetica;
+    background-color:black;
+    margin: 0;
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 100px;
+    font-weight: bold;
+    margin: 0;
+    padding: 2em;
+}
+
+
+h2 {
+    font-size: 32px;
+    margin: 0;
+    padding: 1em 2em;
+}
+
+h3 {
+    font-size: 28px;
+    color:white;
+    letter-spacing: 3px;
+    padding-top: 150px;
+    margin:0;
+}
+
+p {
+   padding: 1em 3em;
+   margin: 1em;
+   color: white;
+}
+
+.price {
+    color:blue;
+}
+
+
+button {
+    background-color: transparent;
+    border-color: white;
+    border-width: 4px;
+    color: white;;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+    
+
+
+/*Sections*/
+
+
+
+
+
+
+/*Header*/
+header, h1 {
+    grid-column: 2 / span 2;
+    color: khaki;
+}
+
+#header  {
+    display:grid;
+    height: 550px;
+}
+
+
+
+    #header .bg-image {
+        position: absolute;
+        background: url(/images/pattern.jpeg);
+        background-position: center;
+        background-repeat: none;
+        background-size: cover;
+        width: 100%;
+        height: 550px;
+        z-index: -1;
+        opacity: 0.9;
+    }
+
+/*Brushes*/
+
+
+
+
+
+
+#section-a {
+    background-color: mediumspringgreen;
+    color: white;
+    text-align: left;
+}
+
+#section-b {
+    text-align: center;
+    min-height: 550px;
+    margin: 0;
+    padding: 0;
+}
+
+
+#section-b .bg-image {
+    position: absolute;
+    background: url(/images/hacksaw.jpeg);
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    width: 100%;
+    height: 550px;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+
+/*Frames*/
+
+
+
+
+#section-c {
+    display: grid;
+    background-color: lightcoral;
+    color: white;
+    text-align: left;
+}
+
+#section-d {
+    min-height: 550px;
+    text-align: center;
+    padding-bottom: 0em;
+    margin: 0;
+}
+
+
+#section-d .bg-image {
+    position: absolute;
+    background: url(/images/frames.jpeg);
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    width: 100%;
+    height: 550px;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+
+
+
+
+
+
+/*Paint*/
+
+#section-e {
+    display: grid;
+    background-color: skyblue;
+    color: white;
+    text-align: left;
+}
+
+#section-f {
+    min-height: 550px;
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 0em;
+    margin: 0;
+    padding: 0;
+}
+
+#section-f .bg-image {
+    position: absolute;
+    background: url(/images/finnish.jpeg);
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    width: 100%;
+    height: 550px;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+
+
+
+/*Media Queries*/
+
+@media(min-width: 700px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr repeat(2, minmax(auto, 400px)) 1fr;
+        grid-gap: 20px;
+    }
+
+    #section-b, 
+    #section-d,
+    #section-f {
+        grid-column: 2 / span 2;
+    }
+ 
